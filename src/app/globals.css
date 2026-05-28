@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0f12;
+  --surface: #111827;
+  --surface-low: #171c20;
+  --surface-card: #1b2024;
+  --surface-high: #252b2e;
+
+  --text-main: #dee3e8;
+  --text-muted: #bdc8d1;
+  --text-subtle: #7c8a96;
+
+  --border-muted: #3e484f;
+  --border-soft: rgba(255, 255, 255, 0.1);
+
+  --primary: #8ed5ff;
+  --primary-strong: #38bdf8;
+  --secondary: #cebdff;
+  --tertiary: #ffc176;
+  --on-primary: #00354a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(56, 189, 248, 0.16), transparent 30%),
+    radial-gradient(circle at 90% 5%, rgba(167, 139, 250, 0.14), transparent 28%),
+    linear-gradient(180deg, #080d11 0%, var(--background) 60%, #090f14 100%);
+  color: var(--text-main);
+  font-family: var(--font-inter), "Noto Sans SC", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.focus-visible-link:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-strong);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fu Yu | AI 工程作品集</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container-low": "#171c20",
+                "outline-variant": "#3e484f",
+                "inverse-surface": "#dee3e8",
+                "tertiary-container": "#f1a02b",
+                "on-primary-fixed-variant": "#004c69",
+                "error-container": "#93000a",
+                "on-primary": "#00354a",
+                "secondary-fixed-dim": "#cebdff",
+                "surface-container-highest": "#303539",
+                "surface-container": "#1b2024",
+                "on-surface-variant": "#bdc8d1",
+                "inverse-primary": "#00668a",
+                "border": "#1E293B",
+                "outline": "#87929a",
+                "text-primary": "#E5E7EB",
+                "on-secondary-fixed-variant": "#4f319c",
+                "surface-container-lowest": "#0a0f12",
+                "background": "#0F172A",
+                "tertiary-fixed-dim": "#ffb960",
+                "surface-container-high": "#252b2e",
+                "secondary-fixed": "#e8ddff",
+                "secondary": "#cebdff",
+                "on-secondary": "#381385",
+                "tertiary-fixed": "#ffddb8",
+                "on-tertiary": "#472a00",
+                "on-error": "#690005",
+                "surface-tint": "#7bd0ff",
+                "on-tertiary-fixed": "#2a1700",
+                "surface-variant": "#303539",
+                "on-tertiary-container": "#613b00",
+                "primary-fixed": "#c4e7ff",
+                "primary-container": "#38bdf8",
+                "primary-fixed-dim": "#7bd0ff",
+                "on-secondary-fixed": "#21005e",
+                "success": "#34D399",
+                "on-surface": "#dee3e8",
+                "text-secondary": "#94A3B8",
+                "on-primary-fixed": "#001e2c",
+                "tertiary": "#ffc176",
+                "secondary-container": "#4f319c",
+                "inverse-on-surface": "#2c3135",
+                "primary": "#8ed5ff",
+                "surface-bright": "#343a3e",
+                "surface": "#111827",
+                "surface-dim": "#0f1418",
+                "on-primary-container": "#004965",
+                "on-tertiary-fixed-variant": "#653e00",
+                "on-error-container": "#ffdad6",
+                "on-background": "#dee3e8",
+                "error": "#ffb4ab",
+                "on-secondary-container": "#bea8ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "section-gap": "80px",
+                "margin-mobile": "16px",
+                "stack-gap": "12px",
+                "container-max": "1280px",
+                "gutter": "24px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Geist"
+                ],
+                "headline-lg": [
+                        "Geist"
+                ],
+                "code": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Geist"
+                ],
+                "label-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "code": [
+                        "14px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "1.1",
+                                "fontWeight": "700"
+                        }
+                ],
+                "label-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .card-hover-effect {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover-effect:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 4px 24px -5px rgba(56, 189, 248, 0.15);
+            transform: translateY(-2px);
+        }
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .workflow-arrow {
+            color: #38bdf8;
+            opacity: 0.5;
+            margin: 0 12px;
+        }
+    </style>
+</head>
+<body class="bg-background text-text-primary antialiased font-body-md overflow-x-hidden selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-xl shadow-sm transition-all duration-300" id="mainNav">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-text-primary tracking-tight cursor-pointer hover:text-primary transition-colors">
+                Fu Yu / AI 工程师
+            </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-body-md text-body-md text-text-secondary font-medium hover:text-primary transition-colors" href="#projects">精选项目</a>
+<a class="font-body-md text-body-md text-text-secondary font-medium hover:text-primary transition-colors" href="#workflow">工作流</a>
+<a class="font-body-md text-body-md text-text-secondary font-medium hover:text-primary transition-colors" href="#capabilities">能力矩阵</a>
+<a class="font-body-md text-body-md text-text-secondary font-medium hover:text-primary transition-colors" href="#contact">联系</a>
+<button class="bg-primary/10 text-primary border border-primary/30 font-label-sm text-label-sm px-4 py-2 rounded font-medium hover:bg-primary hover:text-background transition-colors focus:outline-none">
+                    下载简历
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-text-primary hover:text-primary transition-colors focus:outline-none" id="mobileMenuBtn">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+<!-- Mobile Nav Menu -->
+<div class="md:hidden hidden bg-background border-b border-border absolute w-full" id="mobileMenu">
+<div class="flex flex-col px-gutter py-4 space-y-4">
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors block" href="#projects">精选项目</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors block" href="#workflow">工作流</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors block" href="#capabilities">能力矩阵</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors block" href="#contact">联系</a>
+<button class="bg-primary/10 text-primary border border-primary/30 font-label-sm text-label-sm px-4 py-2 rounded font-medium text-left w-max">
+                    下载简历
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24 md:pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col space-y-6">
+<div>
+<h2 class="font-code text-sm text-primary mb-3 tracking-wider uppercase flex items-center gap-2">
+<span class="w-8 h-px bg-primary inline-block"></span> 软件工程组合
+                        </h2>
+<h1 class="font-headline-xl-mobile md:text-[56px] leading-tight text-text-primary mb-2 font-bold">
+                            付钰 / Fu Yu
+                        </h1>
+<h3 class="text-2xl md:text-3xl text-text-secondary font-semibold gradient-text inline-block">
+                            AI 应用开发 / 全栈工程
+                        </h3>
+</div>
+<p class="text-lg text-text-secondary max-w-2xl leading-relaxed">
+                        具备扎实的软件工程专业背景与严谨的工程化思维。早期深耕 Android 原生开发，现聚焦于 AI 应用开发、Web 全栈与数据分析领域。目标地：上海。
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-background font-label-sm px-6 py-3 rounded font-semibold hover:bg-primary-container hover:text-on-primary-container transition-all shadow-[0_0_15px_rgba(56,189,248,0.3)] inline-flex items-center" href="#projects">
+                            查看项目 <span class="material-symbols-outlined ml-2 text-sm">arrow_downward</span>
+</a>
+<a class="bg-surface border border-border text-text-primary font-label-sm px-6 py-3 rounded hover:border-primary/50 transition-colors inline-flex items-center" href="#capabilities">
+                            能力矩阵
+                        </a>
+</div>
+</div>
+<div class="lg:col-span-5 w-full">
+<div class="bg-surface/50 border border-border rounded-xl p-6 shadow-lg backdrop-blur-sm relative overflow-hidden">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between border-b border-border/50 pb-4 mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary text-sm">terminal</span>
+<h4 class="font-code text-sm text-text-secondary uppercase tracking-wider">Status.log</h4>
+</div>
+<span class="flex h-2.5 w-2.5 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-success"></span>
+</span>
+</div>
+<div class="space-y-4 font-code text-sm">
+<div class="flex flex-col gap-1">
+<span class="text-text-secondary/70">Location_Target</span>
+<span class="text-text-primary pl-4 border-l-2 border-border">Shanghai, China</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-text-secondary/70">Current_Focus</span>
+<span class="text-primary pl-4 border-l-2 border-primary/30">AI Apps / Web Full-stack</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="text-text-secondary/70">Availability</span>
+<span class="text-success pl-4 border-l-2 border-success/30">Actively Seeking Opportunities</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap pt-8" id="projects">
+<div class="mb-12 flex items-end justify-between border-b border-border pb-4">
+<div>
+<h2 class="text-3xl font-bold text-text-primary mb-1">精选项目</h2>
+<p class="font-code text-text-secondary text-sm uppercase tracking-wider">Featured Projects</p>
+</div>
+</div>
+<div class="space-y-12">
+<!-- Project 1: Job Tracker -->
+<div class="group relative bg-surface border border-border rounded-xl overflow-hidden card-hover-effect">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<div class="lg:col-span-5 p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border bg-surface-bright/30">
+<div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="text-2xl font-bold text-text-primary">Job Tracker <br/><span class="text-primary">+ JD Analyzer</span></h3>
+<span class="font-code text-xs text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20">Web/AI</span>
+</div>
+<p class="text-text-secondary mb-6 leading-relaxed">
+                                面向个人求职场景的岗位管理与 JD 分析系统，用于统一记录岗位、解析 JD、计算匹配分、跟踪投递状态。
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Next.js</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">TypeScript</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">FastAPI</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">PostgreSQL</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Docker</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">LLM API</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary text-sm font-medium hover:text-primary-container transition-colors w-fit" href="#">
+                                查看详细架构 <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Image Area: Job Tracker Dashboard -->
+<div class="lg:col-span-7 bg-[#0a0f12] p-6 lg:p-10 relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 20px 20px;"></div>
+<img alt="Job Tracker Dashboard" class="w-full h-auto object-cover rounded-lg border border-border shadow-2xl relative z-10 transform group-hover:scale-[1.02] transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3HSEW46t2dvzKtzRIN3uL1lXLkK5VVffj2W4221Hy8SXTF9508nOtBQSNOnF7DKMmWr4JSSLV2m2OxTO6FCMXGpa8hksKiGGo_zm1qveexV-A5tdQgODd5il94ttw_3T-_mUBPv9QR4pfXwYkrcjFdYmAAWiJW2Pwi7Ihe8duxDn5fjQPQzVjD9SMpzAOWy_c3I4NdKmMVwJD-GYi_RlCplSK67QkpWSbddJ6-TVcmsD4UYc4b7CmALor_t3E3ptQYkkH1zwWh6X"/>
+</div>
+</div>
+</div>
+<!-- Project 2: Accounting App -->
+<div class="group relative bg-surface border border-border rounded-xl overflow-hidden card-hover-effect">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<div class="lg:col-span-5 p-8 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-border bg-surface-bright/30 order-1 lg:order-2">
+<div>
+<div class="flex justify-between items-start mb-6">
+<h3 class="text-2xl font-bold text-text-primary">个人简约<br/><span class="text-secondary">记账本 APP</span></h3>
+<span class="font-code text-xs text-secondary bg-secondary/10 px-2 py-1 rounded border border-secondary/20">Android</span>
+</div>
+<p class="text-text-secondary mb-6 leading-relaxed">
+                                一款面向个人日常财务管理的 Android 记账 App，支持收支记录、分类管理、账单筛选、月度统计。
+                            </p>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Android</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Java</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">MVVM</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Room</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">SQLite</span>
+<span class="text-xs font-code text-text-secondary bg-surface px-2 py-1 rounded border border-border">Material Design</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary text-sm font-medium hover:text-secondary-fixed transition-colors w-fit" href="#">
+                                查看开源代码 <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+<!-- Image Area: App Interface -->
+<div class="lg:col-span-7 bg-[#0a0f12] p-6 lg:p-10 relative flex items-center justify-center overflow-hidden order-2 lg:order-1">
+<div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(45deg, #a78bfa 25%, transparent 25%, transparent 75%, #a78bfa 75%, #a78bfa), linear-gradient(45deg, #a78bfa 25%, transparent 25%, transparent 75%, #a78bfa 75%, #a78bfa); background-size: 20px 20px; background-position: 0 0, 10px 10px;"></div>
+<div class="w-64 relative border-[8px] border-surface-bright rounded-[2.5rem] shadow-2xl z-10 overflow-hidden flex flex-col transform group-hover:scale-[1.02] group-hover:-rotate-1 transition-all duration-500">
+<div class="absolute top-0 w-full h-6 bg-surface-bright rounded-b-xl flex justify-center z-20">
+<div class="w-16 h-4 bg-background rounded-b-lg"></div>
+</div>
+<img alt="Accounting App" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ijjt203aOBbMD2m6c14VBGenaE4nUpFH6x6T_0I-aPo2wuPhkYoCKEIisi781B87W8apaHqHfjO_OCtt2JWultAojPN7uDIoOnDru4YkRJOllWTmzOGxeNbtqeVehma51m0RgIPCl2ECSSAtPRYXrV8JTD59HCQpiQ_Ma7_E_s8fZ22RueCUcEllid7MNsLder6xZH5Ab6tegeeH7diZULs_8A54BgxnewBviTo_BMLBJIvoI-y-wFODhP6YNSee4paIDRMiMqIx"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Workflow & Docs Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap pt-8" id="workflow">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- AI Engineering Workflow -->
+<div class="bg-surface/50 border border-border rounded-xl p-8 relative overflow-hidden">
+<div class="mb-6 border-b border-border pb-4">
+<h3 class="text-2xl font-bold text-text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">account_tree</span>
+                    AI 工程工作流
+                </h3>
+</div>
+<div class="flex flex-wrap items-center gap-y-4 font-code text-sm">
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Research</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">PRD</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Architecture</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Task Cards</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-primary/20 border border-primary/30 px-3 py-1.5 rounded text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">smart_toy</span> AI Coding
+                </div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Testing</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Acceptance</div>
+<span class="material-symbols-outlined workflow-arrow">arrow_forward</span>
+<div class="bg-surface-bright border border-border px-3 py-1.5 rounded text-text-primary">Iteration</div>
+</div>
+<p class="text-text-secondary text-sm mt-6 leading-relaxed">
+                建立标准化的工程化闭环，将需求拆解为可被 AI 理解和执行的清晰步骤，极大提升开发效率与交付质量。
+            </p>
+</div>
+<!-- Document Driven Development -->
+<div class="bg-surface/50 border border-border rounded-xl p-8 relative overflow-hidden">
+<div class="mb-6 border-b border-border pb-4">
+<h3 class="text-2xl font-bold text-text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-success">description</span>
+                    文档驱动开发
+                </h3>
+</div>
+<div class="bg-background border border-border rounded-lg p-4 font-code text-sm">
+<ul class="space-y-2 text-text-secondary">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-secondary/70 text-[18px]">folder_open</span>
+<span class="text-text-primary">.cursor/</span>
+</li>
+<li class="flex items-center gap-2 pl-6">
+<span class="material-symbols-outlined text-primary text-[18px]">markdown</span>
+<span>PRD.md</span>
+<span class="text-xs text-text-secondary/50 ml-2">// 需求定义</span>
+</li>
+<li class="flex items-center gap-2 pl-6">
+<span class="material-symbols-outlined text-primary text-[18px]">markdown</span>
+<span>TASK_CARD.md</span>
+<span class="text-xs text-text-secondary/50 ml-2">// 任务拆解与状态跟踪</span>
+</li>
+<li class="flex items-center gap-2 pl-6">
+<span class="material-symbols-outlined text-primary text-[18px]">markdown</span>
+<span>OPERATION_LOG.md</span>
+<span class="text-xs text-text-secondary/50 ml-2">// 交互决策记录</span>
+</li>
+<li class="flex items-center gap-2 pl-6">
+<span class="material-symbols-outlined text-primary text-[18px]">markdown</span>
+<span>ACCEPTANCE_RECEIPT.md</span>
+<span class="text-xs text-text-secondary/50 ml-2">// 交付标准与验收</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Capabilities Area -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap" id="capabilities">
+<div class="bg-surface/50 border border-border rounded-xl p-8 lg:p-12 relative overflow-hidden">
+<div class="mb-10 text-center relative z-10">
+<h2 class="text-3xl font-bold text-text-primary mb-2">技能矩阵</h2>
+<p class="text-text-secondary font-body-md">全栈工程化视角下的能力图谱</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+<!-- Frontend & Mobile -->
+<div class="bg-background rounded-lg p-6 border border-border hover:border-primary/50 transition-colors">
+<div class="flex items-center gap-3 mb-6 border-b border-border pb-4">
+<div class="w-10 h-10 rounded bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">devices</span>
+</div>
+<h3 class="text-lg font-bold text-text-primary">Frontend &amp; Mobile</h3>
+</div>
+<ul class="space-y-3 font-body-md text-sm text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>React / Next.js / Vue</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>TypeScript / Tailwind CSS</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>Android Native (Java/Kotlin)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span>MVVM / Jetpack Compose</span>
+</li>
+</ul>
+</div>
+<!-- Backend & Data -->
+<div class="bg-background rounded-lg p-6 border border-border hover:border-secondary/50 transition-colors">
+<div class="flex items-center gap-3 mb-6 border-b border-border pb-4">
+<div class="w-10 h-10 rounded bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">dns</span>
+</div>
+<h3 class="text-lg font-bold text-text-primary">Backend &amp; Data</h3>
+</div>
+<ul class="space-y-3 font-body-md text-sm text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span>Python / FastAPI / Django</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span>Node.js / Express</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span>PostgreSQL / MySQL</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5">check_circle</span>
+<span>Redis / SQLite</span>
+</li>
+</ul>
+</div>
+<!-- AI Application -->
+<div class="bg-background rounded-lg p-6 border border-border hover:border-tertiary/50 transition-colors">
+<div class="flex items-center gap-3 mb-6 border-b border-border pb-4">
+<div class="w-10 h-10 rounded bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="text-lg font-bold text-text-primary">AI Application</h3>
+</div>
+<ul class="space-y-3 font-body-md text-sm text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span>LLM API Integration (OpenAI, Anthropic)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span>Prompt Engineering</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span>RAG (Retrieval-Augmented Generation)</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">check_circle</span>
+<span>Agentic Workflows</span>
+</li>
+</ul>
+</div>
+<!-- Engineering Practice -->
+<div class="bg-background rounded-lg p-6 border border-border hover:border-success/50 transition-colors">
+<div class="flex items-center gap-3 mb-6 border-b border-border pb-4">
+<div class="w-10 h-10 rounded bg-success/10 flex items-center justify-center text-success">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="text-lg font-bold text-text-primary">Engineering Practice</h3>
+</div>
+<ul class="space-y-3 font-body-md text-sm text-text-secondary">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-success text-[18px] mt-0.5">check_circle</span>
+<span>Docker / Containerization</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-success text-[18px] mt-0.5">check_circle</span>
+<span>Git / CI/CD Pipelines</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-success text-[18px] mt-0.5">check_circle</span>
+<span>Document-Driven Development</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-success text-[18px] mt-0.5">check_circle</span>
+<span>Agile / Task Management</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-border bg-surface-dim" id="contact">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="col-span-1">
+<div class="font-headline-lg text-2xl font-bold text-text-primary mb-2">
+                    Fu Yu <span class="text-primary text-sm ml-2 font-normal">Portfolio</span>
+</div>
+<p class="font-body-md text-sm text-text-secondary mt-4 max-w-xs">
+                    基于严谨的工程化思维构建。致力于在 AI 浪潮中寻找技术落地的最优解。
+                </p>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col sm:flex-row justify-start md:justify-end gap-12">
+<div>
+<h5 class="font-code text-sm text-text-primary mb-4 uppercase tracking-wider">Connect</h5>
+<ul class="space-y-3">
+<li><a class="text-sm text-text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">code</span> GitHub</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">work</span> LinkedIn</a></li>
+<li><a class="text-sm text-text-secondary hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-sm">mail</span> Email</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-code text-sm text-text-primary mb-4 uppercase tracking-wider">Status</h5>
+<div class="bg-surface border border-border rounded p-4 inline-block">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-2 h-2 bg-success rounded-full"></div>
+<span class="text-sm text-text-primary font-medium">寻求上海区域研发机会</span>
+</div>
+<p class="text-xs text-text-secondary">AI 应用 / Web 全栈 / 数据分析</p>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-gutter mt-12 pt-6 border-t border-border/50 text-xs text-text-secondary/50 font-code text-center">
+        © 2024 Fu Yu. Built with Engineering Rigor.
+    </div>
+</footer>
+<script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-background/80', 'bg-background/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-background/95', 'bg-background/80');
+            }
+        });
+    </script>
+</body></html>
