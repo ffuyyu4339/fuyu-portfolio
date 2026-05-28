@@ -31,6 +31,7 @@
 - `docs/OPERATION_LOG.md`
 
 ### 验证
+- `npm run dev` 成功（本地启动到 `http://localhost:3001`）
 - `npm run lint` 成功
 - `npm run build` 成功
 - 生成路由包含：`/`、`/projects/job-tracker`、`/projects/simple-budget-app`、`/ai-workflow`

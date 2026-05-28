@@ -33,7 +33,7 @@
 
 ## Engineering Check
 
-- [x] npm run dev 成功（通过 `next build` 路由生成与编译验证）
+- [x] npm run dev 成功
 - [x] npm run build 成功
 - [x] npm run lint 成功
 - [x] TypeScript 无明显类型错误
