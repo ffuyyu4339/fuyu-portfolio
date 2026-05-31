@@ -54,3 +54,20 @@
 ## 已知问题
 
 - 联系方式外链（邮箱/GitHub）待补充真实地址。
+
+## 增量验收（2026-05-31 部署）
+
+- [x] 按部署规范完成生产发布：`vercel --prod --yes`
+- [x] Vercel Deployment 状态：`READY`
+- [x] Deployment URL 可访问：`/` 返回 `200`
+- [x] Deployment URL 可访问：`/projects` 返回 `200`
+- [x] 部署前质量门禁通过：`npm run lint` / `npm run build`
+
+## 增量验收（2026-05-31 GitHub 仓库整理）
+
+- [x] 仓库范围限定为作品集网站本身
+- [x] 移除外部设计导出与本地系统文件
+- [x] README 补齐项目背景、技术栈、结构、路由和 Vercel 部署说明
+- [x] `.gitignore` 覆盖依赖、构建产物、环境变量、本地 Vercel 配置和外部参考文件
+- [x] `npm run lint` 通过
+- [x] `npm run build` 通过

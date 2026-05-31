@@ -77,3 +77,50 @@
 - 更新 `README.md`
 - 新增 `ACCEPTANCE_REPORT.md`
 - 更新 `docs/ACCEPTANCE.md`
+
+## 2026-05-31 生产部署执行（Vercel CLI）
+
+### 部署前检查
+
+- 已读取并对齐文档：
+  - `docs/PRD_v1.md`
+  - `docs/CONSTRAINTS.md`
+  - `docs/TASKS.md`
+  - `docs/DEPLOYMENT.md`
+- 执行：
+  - `npm run lint`：通过
+  - `npm run build`：通过
+
+### 部署执行
+
+- 命令：`vercel --prod --yes`
+- 部署结果：成功（`READY`）
+- Deployment URL：
+  - `https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app`
+- Inspector：
+  - `https://vercel.com/fuyus-projects-11d155d9/fy-repository/3YcuNC126icxzGjanbGtaJ3Wcy2Q`
+- 生产别名：
+  - `https://fuyu.dev`
+
+### 访问验证
+
+- `curl -I -L --max-time 20 https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app`：`200`
+- `curl -I -L --max-time 20 https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app/projects`：`200`
+- 备注：当前执行环境对 `https://fuyu.dev` 直连出现 SSL 握手错误，已通过 Vercel Deployment URL 验证线上可用性。
+
+## 2026-05-31 GitHub 仓库整理与推送准备
+
+### 仓库边界整理
+
+- 将包名更新为 `fuyu-portfolio`
+- 补齐 GitHub/Vercel 可读的 `README.md`
+- 新增 `docs/DEPLOYMENT_CHECK_REPORT.md`
+- 清理 `references/stitch/...` 外部设计导出文件
+- 清理本地 `.DS_Store`
+- 清理本地 `.next/` 构建产物
+- 更新 `.gitignore`，覆盖依赖、构建产物、环境变量、Vercel 本地配置和外部参考导出
+
+### 质量检查
+
+- `npm run lint`：通过
+- `npm run build`：通过

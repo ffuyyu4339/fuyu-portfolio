@@ -1,63 +1,118 @@
-# 付钰的个人作品集
+# fuyu-portfolio
 
-基于 Next.js + TypeScript + Tailwind CSS 的个人作品集网站，围绕真实项目实践展示 AI 应用开发、数据分析与工程化能力。
+付钰的个人作品集网站，用于集中展示软件工程背景、AI 应用开发能力、数据分析学习进度、项目实践能力和工程化交付流程。
 
-## 项目介绍
+本仓库只保存作品集网站本身的代码与文档，不包含 Job Tracker、个人记账本 APP 等其他项目的完整源码。
 
-本项目用于将 Open Design 视觉稿落地为可运行、可测试、可部署的网站版本，主题聚焦：
+## 展示内容
 
-- 软件工程背景
-- AI 应用开发
-- 数据分析学习
-- 开源模型集成
-- 作品集系统工程化
-
-核心项目仅包含：
-
-- Job Tracker + JD Analyzer
-- 个人简约记账本 APP
+- 个人定位：软件工程背景的 AI 应用开发者
+- 能力方向：前端工程、后端 API、AI 应用、数据分析、工程化交付
+- 核心项目：Job Tracker + JD Analyzer
+- 核心项目：个人简约记账本 APP
+- 工程流程：PRD、任务卡、AI 辅助开发流程、验收回执、操作日志
 
 ## 技术栈
 
-- 前端：React、Next.js（App Router）、TypeScript、Tailwind CSS
-- 后端能力（项目描述内）：Python、FastAPI、PostgreSQL / MySQL、REST API
-- AI：OpenAI-compatible API、Prompt 模板、JSON 结构化输出、RAG 基础流程
-- 工程：Git、GitHub、Vercel、ESLint
+- Framework: Next.js App Router
+- Language: TypeScript
+- UI: React, Tailwind CSS, lucide-react, framer-motion
+- Content: 本地 TypeScript 数据文件
+- Quality: ESLint, TypeScript build
+- Deploy: GitHub + Vercel
 
-## 页面结构
+## 项目结构
 
-- `/` 首页
-- `/projects` 项目列表
-- `/projects/job-tracker` 项目一详情
-- `/projects/budget-app` 项目二详情
-- `/process` AI 辅助开发流程
-- `/resume` 简历概览
-- `/contact` 联系方式
+```text
+.
+├── content/              # 作品集核心内容数据源
+├── docs/                 # PRD、任务卡、流程、部署和验收文档
+├── public/images/        # 作品集页面引用的图片资产
+├── src/app/              # Next.js App Router 页面
+├── src/components/       # 页面组件
+├── src/data/             # 面向组件的内容适配层
+├── src/lib/              # 通用工具函数
+├── package.json
+└── README.md
+```
 
-兼容历史路由：
+## 页面路由
 
-- `/workflow` → `/process`
-- `/ai-workflow` → `/process`
-- `/projects/simple-budget-app` → `/projects/budget-app`
+- `/`：首页
+- `/projects`：项目列表
+- `/projects/job-tracker`：Job Tracker + JD Analyzer
+- `/projects/budget-app`：个人简约记账本 APP
+- `/process`：AI 辅助开发流程
+- `/resume`：简历概览
+- `/contact`：联系方式
 
-## 本地运行方式
+兼容入口：
+
+- `/workflow` -> `/process`
+- `/ai-workflow` -> `/process`
+- `/learning` -> `/process`
+- `/about` -> `/`
+- `/projects/simple-budget-app` -> `/projects/budget-app`
+
+## 本地开发
 
 ```bash
 npm install
 npm run dev
 ```
 
-默认访问：`http://localhost:3000`
+默认访问：
 
-## 部署方式
+```text
+http://localhost:3000
+```
 
-1. 推送到 GitHub 仓库。
-2. 在 Vercel 导入该仓库并选择 Next.js。
-3. 使用默认构建配置（或 `npm run build`）。
-4. 部署完成后验证关键路由。
+## 质量检查
 
-## 后续计划
+```bash
+npm run lint
+npm run build
+```
 
-- 补充真实 GitHub 与邮箱链接。
-- 增加项目过程截图与指标数据。
-- 增加更多可验证项目案例并持续迭代。
+提交或部署前必须保证以上命令通过。
+
+## Vercel 部署
+
+推荐使用 GitHub 集成自动部署：
+
+1. 将本仓库推送到 GitHub。
+2. 在 Vercel 选择 `Add New Project`。
+3. 导入 `fuyu-portfolio` 仓库。
+4. Framework Preset 选择 `Next.js`。
+5. 使用默认构建配置：
+   - Install Command: `npm install`
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+6. 部署后验证 `/`、`/projects`、`/projects/job-tracker`、`/projects/budget-app`、`/process`。
+
+当前项目不需要必填环境变量。
+
+## 仓库边界
+
+应该提交：
+
+- Next.js 作品集网站源码
+- 作品集展示所需的图片资产
+- 与作品集开发、验收、部署相关的文档
+
+不应该提交：
+
+- `node_modules/`
+- `.next/`
+- `.vercel/`
+- `.env*`
+- `.DS_Store`
+- 外部项目完整源码
+- Open Design、Stitch 等工具导出的临时参考文件
+
+## 当前状态
+
+- 仓库名：`fuyu-portfolio`
+- 项目类型：个人作品集网站
+- 部署目标：Vercel
+- 代码范围：作品集网站本身

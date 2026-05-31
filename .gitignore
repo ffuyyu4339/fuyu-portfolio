@@ -1,11 +1,29 @@
-node_modules
-.next
-out
-.env*
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+dist/
+coverage/
+
+# environment and local platform state
+.env
+.env.*
 !.env.example
+.vercel/
+
+# OS and editor files
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.vercel
+
+# external design/source exports not part of the portfolio website repository
+references/
