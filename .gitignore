@@ -1,29 +1,12 @@
-# dependencies
-node_modules/
-
-# build output
+.DS_Store
+.vercel/
 .next/
-out/
+node_modules/
 dist/
-coverage/
-
-# environment and local platform state
+out/
 .env
 .env.*
-!.env.example
-.vercel/
-
-# OS and editor files
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
-
-# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
-# external design/source exports not part of the portfolio website repository
-references/
