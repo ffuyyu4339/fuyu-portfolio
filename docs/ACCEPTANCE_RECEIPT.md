@@ -53,13 +53,13 @@ npm run lint
 
 - Build: Success
 - Lint: Success
-- Deploy: Blocked at Vercel authentication (device login not completed)
+- Deploy: Success (Production public)
 
 ## Known Issues
 
-- `vercel login` 已启动但需要人工完成 device 认证流程，当前会话无法代替账号授权。
+- None.
 
 ## Deployment URL
 
-- Production:
-- Preview:
+- Production: https://fy-repository.vercel.app
+- Preview: https://fy-repository-92s5m9r94-fuyus-projects-11d155d9.vercel.app

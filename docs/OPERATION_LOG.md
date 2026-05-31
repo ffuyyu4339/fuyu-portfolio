@@ -37,8 +37,7 @@
 - 生成路由包含：`/`、`/projects/job-tracker`、`/projects/simple-budget-app`、`/ai-workflow`
 
 ### 问题
-- `vercel` 部署阻塞在账号认证环节，需你在本机完成 device login。
+- 曾出现认证与项目保护/Root Directory 阻塞，已通过 CLI + API 修复并完成公开部署。
 
 ### 下一步
-- 完成 `vercel login` 后执行 `vercel` 与 `vercel --prod`。
-- 将 Preview/Production URL 回填至验收回执。
+- 按需继续迭代页面内容，并保持 `build/lint` 与部署回执同步。

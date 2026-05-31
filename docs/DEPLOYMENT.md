@@ -47,5 +47,7 @@ vercel --prod
 - 本地 `npm run build`: 成功
 - 本地 `npm run lint`: 成功
 - Vercel CLI: 已安装 (`vercel 54.5.1`)
-- `vercel login`: 已触发 device flow，等待账号认证
-- `vercel whoami`: 未登录状态下会再次进入认证等待，当前未产出 URL
+- `vercel login`: 已完成 device 认证
+- Production: `https://fy-repository.vercel.app`
+- Deployment URL: `https://fy-repository-92s5m9r94-fuyus-projects-11d155d9.vercel.app`
+- 状态：公开可访问（首页及关键路由 200）
