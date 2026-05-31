@@ -61,5 +61,7 @@ npm run lint
 
 ## Deployment URL
 
-- Production: https://fy-repository.vercel.app
-- Preview: https://fy-repository-92s5m9r94-fuyus-projects-11d155d9.vercel.app
+- Site: https://fuyu.dev
+- Vercel fallback: https://fy-repository.vercel.app
+- Latest production deployment: https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app
+- GitHub repository: https://github.com/ffuyyu4339/fuyu-portfolio

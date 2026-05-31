@@ -48,6 +48,9 @@ vercel --prod
 - 本地 `npm run lint`: 成功
 - Vercel CLI: 已安装 (`vercel 54.5.1`)
 - `vercel login`: 已完成 device 认证
-- Production: `https://fy-repository.vercel.app`
-- Deployment URL: `https://fy-repository-92s5m9r94-fuyus-projects-11d155d9.vercel.app`
-- 状态：公开可访问（首页及关键路由 200）
+- 作品集网址：`https://fuyu.dev`
+- Vercel 备用地址：`https://fy-repository.vercel.app`
+- 最新生产部署：`https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app`
+- GitHub 仓库：`https://github.com/ffuyyu4339/fuyu-portfolio`
+- 状态：Vercel Production `READY`
+- 验证：备用生产域名首页及关键路由 200

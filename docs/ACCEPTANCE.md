@@ -71,3 +71,11 @@
 - [x] `.gitignore` 覆盖依赖、构建产物、环境变量、本地 Vercel 配置和外部参考文件
 - [x] `npm run lint` 通过
 - [x] `npm run build` 通过
+
+## 增量验收（2026-05-31 GitHub 与作品集网址同步）
+
+- [x] GitHub 仓库 Homepage 同步为 `https://fuyu.dev`
+- [x] README 补充作品集网址、Vercel 备用地址和 GitHub 仓库地址
+- [x] 部署文档补充最新生产部署信息
+- [x] `https://fy-repository.vercel.app` 关键路由验证通过
+- [x] Vercel inspect 确认 `https://fuyu.dev` 为生产别名

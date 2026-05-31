@@ -4,6 +4,12 @@
 
 本仓库只保存作品集网站本身的代码与文档，不包含 Job Tracker、个人记账本 APP 等其他项目的完整源码。
 
+## 线上地址
+
+- 作品集网址：<https://fuyu.dev>
+- Vercel 备用地址：<https://fy-repository.vercel.app>
+- GitHub 仓库：<https://github.com/ffuyyu4339/fuyu-portfolio>
+
 ## 展示内容
 
 - 个人定位：软件工程背景的 AI 应用开发者
@@ -115,4 +121,6 @@ npm run build
 - 仓库名：`fuyu-portfolio`
 - 项目类型：个人作品集网站
 - 部署目标：Vercel
+- 线上地址：`https://fuyu.dev`
+- 备用地址：`https://fy-repository.vercel.app`
 - 代码范围：作品集网站本身

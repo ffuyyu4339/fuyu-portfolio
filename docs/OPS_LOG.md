@@ -124,3 +124,32 @@
 
 - `npm run lint`：通过
 - `npm run build`：通过
+
+## 2026-05-31 GitHub 与作品集网址同步
+
+### 线上信息
+
+- 作品集网址：`https://fuyu.dev`
+- Vercel 备用地址：`https://fy-repository.vercel.app`
+- 最新生产部署：`https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app`
+- GitHub 仓库：`https://github.com/ffuyyu4339/fuyu-portfolio`
+
+### 同步动作
+
+- 更新 GitHub 仓库 Homepage URL
+- 更新 `README.md`
+- 更新 `docs/DEPLOYMENT.md`
+- 更新 `docs/DEPLOYMENT_CHECK_REPORT.md`
+- 更新 `docs/ACCEPTANCE.md`
+- 更新 `docs/ACCEPTANCE_RECEIPT.md`
+
+### 验证
+
+- `vercel inspect https://fy-repository-kdveoa4sg-fuyus-projects-11d155d9.vercel.app`：Production `Ready`
+- Vercel aliases 包含 `https://fuyu.dev`、`https://www.fuyu.dev`、`https://fy-repository.vercel.app`
+- `https://fy-repository.vercel.app/`：200
+- `https://fy-repository.vercel.app/projects`：200
+- `https://fy-repository.vercel.app/projects/job-tracker`：200
+- `https://fy-repository.vercel.app/projects/budget-app`：200
+- `https://fy-repository.vercel.app/process`：200
+- 备注：当前执行环境对 `https://fuyu.dev` 直连仍出现 SSL 握手错误，已通过 Vercel inspect 确认生产别名，并通过 Vercel 备用生产域名验证线上内容。
