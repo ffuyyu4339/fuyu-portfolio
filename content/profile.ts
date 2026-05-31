@@ -1,28 +1,16 @@
 export const profile = {
-  name: "Fu Yu",
-  chineseName: "付钰",
+  name: "付钰",
+  englishName: "Fu Yu",
   siteName: "FuYu.dev",
-  headline: "Software Engineering → AI Application Development",
-  role: "Software Engineering → AI Application Development",
-  location: "Shanghai-oriented / Open to AI application and data roles",
+  headline: "软件工程背景的 AI 应用开发者",
+  role: "软件工程背景的 AI 应用开发者",
+  location: "上海 · 可远程/可线下",
   positioning:
-    "软件工程专业背景，Android 应用开发方向，正在从服务行业回归技术行业，目标方向为 AI 应用开发、数据分析、互联网产品开发和开源模型应用集成。",
+    "我关注 AI 应用开发、数据分析与开源模型集成，正在从服务行业回归技术行业。",
   summary:
-    "我正在从软件工程与 Android 开发背景出发，构建面向 AI 应用开发、数据分析和工程化交付的个人作品集。",
-  directions: [
-    "AI Application Development",
-    "Data Analytics",
-    "Android Background",
-    "Open-source Model Application",
-    "AI-assisted Software Engineering",
-  ],
-  focus: [
-    "AI Application Development",
-    "Data Analytics",
-    "Android Background",
-    "Open-source Model Application",
-    "AI-assisted Software Engineering",
-  ],
+    "这个作品集用于展示我的项目实践、工程化能力、AI 辅助开发流程与持续迭代能力。",
+  directions: ["AI 应用开发", "数据分析", "互联网产品开发", "开源模型应用集成", "前端工程化", "后端 API 与数据建模"],
+  focus: ["AI 应用开发", "数据分析", "开源模型集成", "工程化交付"],
   links: {
     github: "",
     email: "",
@@ -31,6 +19,6 @@ export const profile = {
   contact: {
     email: "",
     github: "",
-    city: "Shanghai",
+    city: "上海",
   },
 };

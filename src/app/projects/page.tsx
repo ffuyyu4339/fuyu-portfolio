@@ -1,26 +1,27 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { PageShell } from "@/components/layout/PageShell";
+import { ProjectCard } from "@/components/ProjectCard";
+import { SectionTitle } from "@/components/SectionTitle";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Projects | Fu Yu",
-  description: "Core project case studies for Fu Yu portfolio.",
+  title: "项目列表 | 付钰的个人作品集",
+  description: "项目列表包含 Job Tracker + JD Analyzer 与个人简约记账本 APP。",
 };
 
 export default function ProjectsPage() {
   return (
-    <PageShell className="space-y-6">
-      <h1 className="text-3xl font-semibold text-text-main">Projects</h1>
-      <ul className="space-y-3">
+    <div className="mx-auto w-full max-w-6xl space-y-8 px-4 py-10 sm:px-6 lg:px-8">
+      <SectionTitle
+        label="项目"
+        level="h1"
+        title="项目列表"
+        description="围绕真实实践展开，覆盖 AI 应用开发与 Android 移动端工程能力。"
+      />
+      <div className="grid gap-5 md:grid-cols-2">
         {projects.map((project) => (
-          <li key={project.slug}>
-            <Link href={`/projects/${project.slug}`} className="focus-visible-link text-text-muted hover:text-primary">
-              {project.title}
-            </Link>
-          </li>
+          <ProjectCard key={project.slug} project={project} />
         ))}
-      </ul>
-    </PageShell>
+      </div>
+    </div>
   );
 }
