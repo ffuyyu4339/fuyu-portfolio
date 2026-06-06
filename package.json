@@ -5,7 +5,8 @@
   "description": "Fu Yu portfolio static site deployed to Cloudflare Pages.",
   "scripts": {
     "preview": "wrangler pages dev public",
-    "deploy": "wrangler pages deploy public --project-name fuyu-portfolio",
+    "deploy": "wrangler pages deploy public --project-name fy-portfolio",
+    "deploy:legacy": "wrangler pages deploy public --project-name fuyu-portfolio",
     "deploy:backup": "wrangler pages deploy public --project-name fu-yu-cloudflare-pages-site",
     "check": "node -e \"const fs=require('node:fs');const html=fs.readFileSync('public/index.html','utf8');const bad=/fu-yu-portfolio-open-design\\\\.vercel\\\\.app|vercel\\\\.app|\\/_next/.test(html);if(bad){console.error('Found stale Vercel or _next references.');process.exit(1)}console.log('No stale Vercel or _next references found.')\""
   },
