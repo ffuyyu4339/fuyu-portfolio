@@ -5,7 +5,6 @@
 当前这份仓库已经接入 Cloudflare Pages 的 Git 自动部署，生产地址是：
 
 - [https://fy-portfolio.pages.dev](https://fy-portfolio.pages.dev)
-- 旧的直传版地址作为备用：`https://fuyu-portfolio.pages.dev`
 
 ## 目录
 
@@ -28,14 +27,12 @@ python3 -m http.server 4173
 
 只要把改动推送到 GitHub 的 `master` 分支，Cloudflare 就会自动重新部署。
 
-如果你要更新旧的直传备份项目，也可以继续用 Wrangler CLI：
-
 ```bash
 cd /Users/fuyu/Documents/CodexChat/fu-yu-cloudflare-pages-site
 npm run deploy
 ```
 
-如果你更习惯 Dashboard，手动上传的话可以继续沿用旧的直传项目流程；但长期建议使用 Git 自动部署版本。
+如果你更习惯 Dashboard，也可以在 Cloudflare Pages 项目里直接查看构建和部署状态。
 
 1. 新建 Cloudflare Pages 项目。
 2. 选择 `Import an existing Git repository`。
